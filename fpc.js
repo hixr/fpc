@@ -19,7 +19,8 @@
         return;
     }
     function runMe() {
-        alert('ok');
+        var plotFrame = $('#fooplot-frame');
+        $('#plots_add ~ div').slideUp();
     }
     window.onload = runMe;
 }());
