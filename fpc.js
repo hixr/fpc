@@ -1,5 +1,5 @@
 // ==UserScript==
-// @version     0.0.5
+// @version     0.0.6
 // @name        Customizer
 // @match       *://fooplot.com/*
 // @run-at      document-start
@@ -52,7 +52,8 @@
         $('td>button:has(span:contains("Permalink"))')
             .closest('td')
             .appendTo('table[width="100%"]>tbody>tr:first-child');
-        $('input.data-eq.equation').css("width", "97%");
+        $('input.data-eq.equation').css("width", "97%")
+            .attr("value", "x");
         $('li.plot.ui-widget-content').css("width", "300%");
         $('#plots_add_type-button').css(funcStyle)
             .closest('table').css("width", "100%");
