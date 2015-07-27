@@ -1,5 +1,5 @@
 // ==UserScript==
-// @version     0.0.3
+// @version     0.0.4
 // @name        Customizer
 // @match       *://fooplot.com/*
 // @run-at      document-start
@@ -56,6 +56,10 @@
         $('li.plot.ui-widget-content').css("width", "300%");
         $('#plots_add_type-button').css(funcStyle)
             .closest('table').css("width", "100%");
+        $('#options-xmin').attr("value", "0");
+        $('#options-xmax').attr("value", "1");
+        $('#options-ymin').attr("value", "0");
+        $('#options-ymax').attr("value", "1");
         plotFrame.css(plotStyle);
         plotFrame.siblings().last().css(leftStyle);
         plotFrame.parent().next().appendTo(plotFrame.parent()).css(rightStyle);
