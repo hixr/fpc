@@ -1,5 +1,5 @@
 // ==UserScript==
-// @version     0.0.2
+// @version     0.0.3
 // @name        Customizer
 // @match       *://fooplot.com/*
 // @run-at      document-start
@@ -60,6 +60,6 @@
         plotFrame.siblings().last().css(leftStyle);
         plotFrame.parent().next().appendTo(plotFrame.parent()).css(rightStyle);
     }
-    $('body').click(runMe);
+    window.onload = function () { $('body').click(runMe) };
 }());
 
