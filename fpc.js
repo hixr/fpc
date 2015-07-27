@@ -1,6 +1,6 @@
 // ==UserScript==
 // @version     0.0.1
-// @name        Force playlist autoplay for YouTube
+// @name        Customizer
 // @match       *://fooplot.com/*
 // @run-at      document-start
 // @grant       none
