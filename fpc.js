@@ -1,5 +1,5 @@
 // ==UserScript==
-// @version     0.0.4
+// @version     0.0.5
 // @name        Customizer
 // @match       *://fooplot.com/*
 // @run-at      document-start
@@ -48,7 +48,7 @@
             + ', td[valign!="top"]:contains("... link to this page:")'
             + ', table:nth-of-type(2) tr:last'
             + ', div:has(table[cellspacing="0"])';
-        $(slide).slideUp();
+        $(slide).slideUp(1000);
         $('td>button:has(span:contains("Permalink"))')
             .closest('td')
             .appendTo('table[width="100%"]>tbody>tr:first-child');
@@ -64,6 +64,6 @@
         plotFrame.siblings().last().css(leftStyle);
         plotFrame.parent().next().appendTo(plotFrame.parent()).css(rightStyle);
     }
-    window.onload = function () { $('body').click(runMe) };
+    window.onload = function () { $('#plots').parent().click(runMe) };
 }());
 
