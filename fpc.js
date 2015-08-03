@@ -1,7 +1,6 @@
 // ==UserScript==
-// @version     0.0.6
+// @version     0.0.7
 // @name        Customizer fooplot
-// @namespace https://raw.githubusercontent.com/hixr
 // @match       *://fooplot.com/*
 // @run-at      document-start
 // @grant       none
