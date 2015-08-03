@@ -1,23 +1,12 @@
 // ==UserScript==
-// @version     0.0.8
+// @version     0.0.9
 // @name        Customizer fooplot
 // @match       *://fooplot.com/*
-// @run-at      document-start
 // @grant       none
 // @noframes
 // ==/UserScript==
-(function fpc() {
+(function() {
     'use strict';
-    var injection;
-    if (document.querySelector('[name="html5player/html5player"]')) {
-        window.location.reload(false);
-    } else if (!document.getElementById('fpc')) {
-        injection = document.createElement('script');
-        injection.id = 'fpc';
-        injection.textContent = '(' + fpc + '())';
-        document.documentElement.appendChild(injection);
-        return;
-    }
     function runMe() {
         var plotFrame = $('#fooplot-frame');
         var plotStyle = {
@@ -64,6 +53,8 @@
         plotFrame.css(plotStyle);
         plotFrame.siblings().last().css(leftStyle);
         plotFrame.parent().next().appendTo(plotFrame.parent()).css(rightStyle);
+        theplot.setSize();
+        doPlot();
     }
     window.onload = function () { $('#plots').parent().click(runMe) };
 }());
