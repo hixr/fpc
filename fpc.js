@@ -1,5 +1,5 @@
 // ==UserScript==
-// @version     0.0.7
+// @version     0.0.8
 // @name        Customizer fooplot
 // @match       *://fooplot.com/*
 // @run-at      document-start
